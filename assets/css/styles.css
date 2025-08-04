@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'PlusJakartaSans';
+    src: url('../fonts/static/PlusJakartaSans-Medium.ttf') format('ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PlusJakartaSans';
+    src: url('../fonts/static/PlusJakartaSans-Bold.ttf') format('ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+  --main-color: hsl(202, 55%, 16%);
+  --accent-color: #FF8C00;
+  --text-color: hsl(200, 24%, 40%);
+  --background-color: hsl(202, 86%, 94%);
+  --lime: hsl(61, 70%, 52%);
+}
+
+body{
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+}
+
+.payment_form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-self: center;
+    max-width: 800px;
+    margin-top: 200px;
+}
+
+.payment-fields{
+    background-color: white;
+    max-width: 400px;
+
+    h1{
+        font-family:'PlusJakartaSans';
+        color: var(--main-color);
+        font-weight: 700;
+    }
+
+    fieldset{
+        border: none;
+    }
+
+    legend{
+        color: var(--text-color);
+        border: none;
+        padding: 0;
+    }
+}
+
+.title-form{
+    display: flex;
+    align-content: space-between;
+    gap: 70px;
+    padding: 0 10px;
+}
+
+.btn-clear{
+    border: none;
+    background-color: transparent;
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+.btn-clear:hover{
+    color: var(--lime);
+}
+
+.amount-container{
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.box-field{
+      flex: 1;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      outline: none;
+      width: 100%;
+}
+
+.prefix-box {
+      background-color: var(--background-color);
+      padding: 0 12px;
+      font-size: 16px;
+      color: var(--main-color);
+      display: flex;
+      align-items: center;
+      height: 44px;
+}
+
+.calculate-section{
+    display: flex;
+    flex-direction: row;
+}
+
+.radio-field{
+    border: 1px solid black;
+    margin-top: 4px;
+    border-radius: 4px;
+    color: var(--main-color);
+    font-family: 'PlusJakartaSans';
+    font-weight: 500;
+    padding: 8px 12px;
+}
+
+.radio-field label{
+    font-size: 16px;
+}
+
+.btn-calculate{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background-color: var(--lime);
+    border: none;
+    padding: 8px 20px;
+    color: var(--main-color);
+    font-weight: 500;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.payment-result{
+    background-color: var(--main-color);
+    align-content: center;
+    text-align: center;
+    padding: 15px;
+    border-radius: 12px;
+
+    h2{
+        color: white;
+    }
+
+    p{
+        color: var(--background-color);
+        font-size: 16px;
+    }
+}

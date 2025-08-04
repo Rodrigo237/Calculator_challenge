@@ -5,43 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Mortgage repayment calculator</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <title>Mortgage repayment calculator</title>
 </head>
 <body>
-
-  Mortgage Calculator
-  Clear All
-
-  Mortgage Amount
-
-  Mortgage Term
-
-  Interest Rate
-
-  Mortgage Type
-  Repayment
-  Interest Only
-
-  Calculate Repayments
-
-  <!-- Empty results start -->
-
-  Results shown here
-
-  Complete the form and click “calculate repayments” to see what 
-  your monthly repayments would be.
+  <section class="payment_form">
+      <div class="payment-fields">
+        <div class="title-form">
+          <h1>Mortgage Calculator</h1>
+          <button class="btn-clear">Clear All</button>
+        </div>
+        <fieldset>
+          <legend>Mortgage Amount</legend>
+          <div class="amount-container">
+            <div class="prefix-box">£</div>
+            <input class="box-field" type="number" name="mortage-amount" id="mortage-amount">
+          </div>
+        </fieldset>
+        <div class="calculate-section">
+            <fieldset>
+                <legend>Mortgage Term</legend>
+                <div class="amount-container">
+                  <input class="box-field" type="number" name="mortage-term" id="mortage-term">
+                  <div class="prefix-box">years</div>
+                </div>
+              </fieldset>
+              <fieldset>
+                  <legend>Interest Rate</legend>
+                  <div class="amount-container">     
+                      <input class="box-field" type="number" name="interest-rate" id="interest-rate">
+                      <div class="prefix-box">%</div>
+                  </div>
+                </fieldset>
+        </div>
+        
+        <fieldset>
+          <legend>Mortgage Type</legend>
+          <div class="radio-field">
+            <input type="radio" value="repayment" name="mortage-type" id="repayment">
+            <label for="repayment">Repayment</label>
+          </div>
+          <div class="radio-field">
+            <input type="radio" value="interest_only" name="mortage-type" id="interest-only">
+            <label for="interest-only">Interest only</label>
+          </div>
+        </fieldset>
+        <button class="btn-calculate">
+          <img src="./assets/images/icon-calculator.svg" alt="">
+          Calculate Repayments</button>
+      </div>
+      <div class="payment-result">
+          <img src="./assets/images/illustration-empty.svg" alt="calculator">
+          <h2>Results shown here</h2>
+          <p> Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p>
+      </div>
+  </section>
 
   <!-- Empty results end -->
 
   <!-- Completed results start -->
-
+  
+  <!--
   Your results
 
   Your results are shown below based on the information you provided. 
@@ -50,12 +74,8 @@
   Your monthly repayments
 
   Total you'll repay over the term
-
-  <!-- Completed results end -->
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  -->
+  
 </body>
 </html>

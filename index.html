@@ -15,31 +15,31 @@
           <h1>Mortgage Calculator</h1>
           <button class="btn-clear">Clear All</button>
         </div>
-        <fieldset>
+        <fieldset class="amount-fieldset">
           <legend>Mortgage Amount</legend>
           <div class="amount-container">
             <div class="prefix-box">£</div>
-            <input class="box-field" type="number" name="mortage-amount" id="mortage-amount">
+            <input class="box-field" type="number" name="mortage-amount" id="mortage-amount" required>
           </div>
         </fieldset>
         <div class="calculate-section">
             <fieldset>
                 <legend>Mortgage Term</legend>
                 <div class="amount-container">
-                  <input class="box-field" type="number" name="mortage-term" id="mortage-term">
+                  <input class="box-field" type="number" name="mortage-term" id="mortage-term" required>
                   <div class="prefix-box">years</div>
                 </div>
               </fieldset>
               <fieldset>
                   <legend>Interest Rate</legend>
                   <div class="amount-container">     
-                      <input class="box-field" type="number" name="interest-rate" id="interest-rate">
+                      <input class="box-field" type="number" name="interest-rate" id="interest-rate" required>
                       <div class="prefix-box">%</div>
                   </div>
                 </fieldset>
         </div>
         
-        <fieldset>
+        <fieldset class="radio-group">
           <legend>Mortgage Type</legend>
           <div class="radio-field">
             <input type="radio" value="repayment" name="mortage-type" id="repayment">
@@ -54,28 +54,28 @@
           <img src="./assets/images/icon-calculator.svg" alt="">
           Calculate Repayments</button>
       </div>
-      <div class="payment-result">
+      <div class="payment-result-empty">
           <img src="./assets/images/illustration-empty.svg" alt="calculator">
           <h2>Results shown here</h2>
           <p> Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p>
       </div>
+      <div class="payment-result">
+          <h1>Your results</h1>
+          <p> Your results are shown below based on the information you provided.To adjust the results, edit the form and click “calculate repayments” again.</p>
+          <div class="result-area">
+              <div class="final-result">
+                 <h3>Your monthly repayments</h3>
+                  <h1 class="monthly-payment"></h1>
+               </div>
+               <hr class="divider">
+                <div>
+                    <h3>Total you'll repay over the term</h3>
+                    <h2 class="total-payment"></h2>
+                  </div> 
+          </div>  
+       </div>
+       <script src="./app.js"></script>
   </section>
-
-  <!-- Empty results end -->
-
-  <!-- Completed results start -->
-  
-  <!--
-  Your results
-
-  Your results are shown below based on the information you provided. 
-  To adjust the results, edit the form and click “calculate repayments” again.
-
-  Your monthly repayments
-
-  Total you'll repay over the term
-  
-  -->
   
 </body>
 </html>
